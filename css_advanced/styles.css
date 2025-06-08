@@ -864,3 +864,132 @@ footer p {
         max-width: 300px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Free Membership Section */
+.membership-section {
+    background-color: #071629; /* Dark blue background */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.membership-section h2 {
+    font-size: 32px;
+    margin-bottom: 60px;
+    color: white; /* Default white color */
+}
+
+.membership-section h2 span {
+    color: #C271FF; /* Purple color for "Free" */
+}
+
+.membership-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.membership-card {
+    width: 200px;
+    color: white;
+}
+
+.membership-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.membership-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.membership-card p {
+    font-size: 14px;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+.membership-button {
+    background-color: #C271FF; /* Purple button */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 22px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto; /* Centers the button */
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.membership-button:hover {
+    background-color: #A55CE5;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 25px rgba(194, 113, 255, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .membership-container {
+        gap: 30px;
+    }
+    
+    .membership-card {
+        width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .membership-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .membership-card {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
