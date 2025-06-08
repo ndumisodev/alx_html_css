@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif; /* Ensure you've linked this font from Google Fonts */
 }
 
 body {
@@ -13,55 +13,91 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #071629;
-    padding: 20px 50px;
+
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between; /* Push logo left and nav right */
+    align-items: center; /* Vertically center items */
+    
+    /* Add some padding and background */
+    padding: 20px 50px;
+    background-color: transparent;
+    padding: 20px 50px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
+/* Navigation Bar - This is where the main layout for logo and links happens */
+nav {
+    display: flex; /* Make the <nav> element a flex container */
+    justify-content: space-between; /* Puts the first item (logo) on the far left,
+                                       and the last item (<ul>) on the far right */
+    align-items: center; /* Vertically centers the logo and the nav list */
+    width: 100%; /* Ensure the nav takes up the full width within the header's padding */
+}
+
 header img {
-    height: 30px;
+    height: 30px; /* Adjust logo size as needed */
+    /* No change needed here */
 }
 
+/* Navigation List (<ul>) */
 nav ul {
-    display: flex;
+    display: flex; /* This is already correct and lays out the <li> items horizontally */
     list-style: none;
-    gap: 30px;
+    gap: 30px; /* Space between each navigation item */
+    margin: 0; /* Ensure no default margin pushes the ul */
+    padding: 0; /* Ensure no default padding pushes the ul */
 }
 
+/* Navigation Links (<a>) */
 nav a {
     color: white;
     text-decoration: none;
     font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
+    transition: color 0.3s ease; /* Smooth hover effect */
 }
 
-/* Hero Section */
+nav a:hover {
+    color: #C271FF; /* Hover color for nav links */
+}
+
+/* --- Hero Section (Burner) --- */
 main section:first-child {
-    background: linear-gradient(rgba(7, 22, 41, 0.9), rgba(7, 22, 41, 0.9)), 
-                url('./images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+    /* Background Image ONLY for the Hero Section */
+    background: url('./images/Object.png'); /* Your background image - removed the linear-gradient */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    height: 100vh; /* Make the hero section fill the viewport height */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Arrange content vertically: header, then the two divs */
+    justify-content: center; /* Center content vertically within the section */
+    align-items: center; /* Center content horizontally */
     text-align: center;
-    color: white;
-    padding-top: 80px; /* To account for fixed header */
+    color: white; /* Keep text color white for visibility against the background */
+    padding-top: 80px; /* To account for fixed header, pushes content down */
+    position: relative; /* Needed for z-index context if header isn't fixed */
+}
+
+/* Div containing H1, Spans, and Button */
+main section:first-child > div:first-of-type {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    margin-bottom: 100px; /* Space between this div and the "Learn from the pros" div */
 }
 
 main section:first-child h1 {
     font-size: 120px;
     font-weight: 700;
     margin-bottom: 20px;
+    /* Responsive font size for h1 */
+    font-size: clamp(40px, 10vw, 120px); 
 }
 
 main section:first-child span {
@@ -69,6 +105,7 @@ main section:first-child span {
     margin: 0 10px;
     font-weight: 700;
     font-size: 16px;
+    text-transform: uppercase;
 }
 
 main section:first-child button {
@@ -82,29 +119,40 @@ main section:first-child button {
     margin-top: 40px;
     cursor: pointer;
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
-/* Pros Section */
-.pros-section {
-    padding: 100px 50px;
-    text-align: center;
+main section:first-child button:hover {
+    background-color: #a350e0; /* Darker purple on hover */
 }
 
-.pros-section h2 {
+/* Div containing H2 and Pros Cards */
+main section:first-child > div:last-of-type {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    width: 100%; /* Take full width of parent flex container */
+    max-width: 1000px; /* Limit width for better layout on large screens */
+}
+
+main section:first-child h2 {
     color: #C271FF;
     font-size: 32px;
-    margin-bottom: 70px;
+    margin-bottom: 70px; /* Space between heading and pro cards */
 }
 
-.pros-container {
+.pros-container { /* This is the div that contains individual pro cards */
     display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
+    justify-content: center; /* Center pro cards within their container */
+    gap: 50px; /* Space between pro cards */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+    width: 100%; /* Ensure it uses available width */
 }
 
-.pro-card {
+.pro-card { /* This is the individual pro card div */
     width: 150px;
+    text-align: center;
+    color: white; /* Ensure text color is white for pro cards in hero */
 }
 
 .pro-card img {
@@ -123,8 +171,193 @@ main section:first-child button {
 .pro-card p {
     font-style: italic;
     font-size: 16px;
+    opacity: 0.8; /* Slightly faded for emphasis */
 }
 
+
+
+/* Learn from Pros Section - Single Line Version */
+.pros-section {
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+.pros-section h2 {
+    color: #C271FF;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.pros-container {
+    display: inline-flex; /* Changed from flex to inline-flex */
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 20px; /* Space for scrollbar if needed */
+}
+
+.pro-card {
+    flex: 0 0 auto; /* Don't grow or shrink */
+    width: 180px;
+    display: inline-flex; /* Changed from flex */
+    flex-direction: column;
+    align-items: center;
+}
+
+.pro-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #C271FF;
+    margin-bottom: 15px;
+}
+
+.pro-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.pro-card p {
+    font-size: 11px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+    /* line-height: 1.4; */
+}
+
+/* Hide scrollbar but keep functionality */
+.pros-section::-webkit-scrollbar {
+    display: none;
+}
+
+/* Responsive adjustments - Prevent wrapping at all costs */
+@media (max-width: 1200px) {
+    .pro-card {
+        width: 160px;
+    }
+}
+
+@media (max-width: 992px) {
+    .pro-card {
+        width: 140px;
+    }
+    .pro-card img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pros-section {
+        padding: 50px 15px;
+    }
+    .pro-card {
+        width: 120px;
+    }
+    .pro-card h3 {
+        font-size: 14px;
+    }
+    .pro-card p {
+        font-size: 11px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .pros-container {
+        gap: 30px;
+    }
+    .pro-card {
+        flex-basis: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pros-section {
+        padding: 60px 20px;
+    }
+    .pros-section h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    .pros-container {
+        gap: 30px;
+    }
+    .pro-card {
+        flex-basis: 140px;
+    }
+    .pro-card img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pros-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .pro-card {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+
+
+
+
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px; /* Adjust header padding for smaller screens */
+    }
+
+    nav ul {
+        gap: 15px; /* Reduce gap between nav items */
+    }
+
+    main section:first-child {
+        padding: 80px 20px 0; /* Adjust padding for smaller screens */
+        justify-content: flex-start; /* Start content from the top to allow for more space */
+    }
+
+    main section:first-child h1 {
+        font-size: 60px; /* Smaller font size for mobile */
+        margin-bottom: 30px; /* Adjust margin */
+    }
+
+    main section:first-child > div:first-of-type {
+        margin-bottom: 50px; /* Reduce space between hero text and pros section on mobile */
+    }
+
+    main section:first-child h2 {
+        font-size: 28px; /* Smaller h2 for mobile */
+        margin-bottom: 40px;
+    }
+
+    .pros-container {
+        flex-direction: column; /* Stack pro cards vertically on smaller screens */
+        align-items: center; /* Center them */
+        gap: 30px; /* Adjust gap */
+    }
+
+    .pro-card {
+        width: 100%; /* Allow cards to take full width */
+        max-width: 250px; /* Max width to prevent them from becoming too wide */
+    }
+}
+
+/* Original Testimonial, Tutorials, Membership, FAQ, and Footer sections follow below, unchanged */
 /* Testimonial Section */
 .testimonial-section {
     background-color: #C271FF;
@@ -243,7 +476,7 @@ main section:first-child button {
 }
 
 .rating i:last-child {
-    color: #D8D8D8;
+    color: #D8D8D8; /* Assuming the 5th star is often un-filled */
 }
 
 .duration {
@@ -401,5 +634,195 @@ footer p {
     
     .faq-column {
         width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Testimonial Section with Purple Background */
+.testimonial-section {
+    background-color: #C271FF;
+    color: white;
+    padding: 80px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.testimonial-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-content {
+    max-width: 600px;
+}
+
+.testimonial-content blockquote {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.testimonial-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.testimonial-content p {
+    font-size: 18px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Tutorials Section with White Background */
+.tutorials-section {
+    background-color: white;
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.tutorials-section h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 60px;
+    color: #071629;
+}
+
+.tutorials-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tutorial-card {
+    width: 255px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(7, 22, 41, 0.1);
+    overflow: hidden;
+    text-align: left;
+}
+
+.tutorial-thumbnail {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.tutorial-content {
+    padding: 20px;
+}
+
+.tutorial-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #071629;
+}
+
+.tutorial-card p {
+    font-size: 14px;
+    color: rgba(7, 22, 41, 0.6);
+    margin-bottom: 15px;
+}
+
+.tutor-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.tutor-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.tutor-info h4 {
+    font-size: 14px;
+    color: #C271FF;
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.rating i {
+    color: #C271FF;
+    font-size: 12px;
+}
+
+.rating i:last-child {
+    color: #D8D8D8;
+}
+
+.duration {
+    text-align: right;
+    font-size: 14px;
+    color: #C271FF;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .testimonial-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .tutorials-container {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-section,
+    .tutorials-section {
+        padding: 60px 20px;
+    }
+    
+    .testimonial-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .testimonial-content blockquote {
+        font-size: 18px;
+    }
+    
+    .tutorial-card {
+        width: 100%;
+        max-width: 300px;
     }
 }
