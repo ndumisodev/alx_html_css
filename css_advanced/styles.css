@@ -644,22 +644,6 @@ footer p {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Testimonial Section with Purple Background */
 .testimonial-section {
     background-color: #C271FF;
@@ -753,19 +737,73 @@ footer p {
     margin-bottom: 15px;
 }
 
+
 .tutor-info {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    min-height: 30px; 
 }
 
 .tutor-avatar {
-    width: 30px;
-    height: 30px;
+    width: 35px !important; 
+    height: 35px !important;
+    min-width: 20px !important; 
     border-radius: 50%;
-    margin-right: 10px;
+    object-fit: cover;
+    margin-right: 8px;
+    display: block; 
+    border: 1px solid #C271FF; 
 }
 
+
+.thumbnail-container {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden; 
+}
+
+.tutorial-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px; 
+    height: 60px;
+    cursor: pointer;
+    z-index: 2;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.tutorial-card:hover .play-button {
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+.tutorial-card:hover .tutorial-thumbnail {
+    transform: scale(1.05);
+}
+
+/* Rating Stars Adjustment */
+.rating {
+    display: flex;
+    gap: 3px; /* Tighter spacing */
+    margin-bottom: 8px;
+}
+
+.rating i {
+    color: #C271FF;
+    font-size: 10px; /* Smaller stars */
+}
 .tutor-info h4 {
     font-size: 14px;
     color: #C271FF;
