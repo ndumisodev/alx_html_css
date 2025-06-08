@@ -7,70 +7,89 @@
     <link href="base.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
-<body>
+<body class="works_on_smartphone">
     <header>
-        <ul>
-            <li>
-                <a href="tweets.html"></a>
-            </li>
-            <li></li>
-        </ul>
+        <nav> <!-- Added nav tag for semantic clarity for navigation links -->
+            <ul>
+                <li class="logo">&#x2328;</li> <!-- ADDED: Logo unicode character with class="logo" -->
+                <li>
+                    <a href="tweets.html">Tweets</a> 
+                </li>
+                <li><a href="index.html">Home</a></li> <!-- ADDED: Home link text -->
+                <li><a href="#about">About</a></li> <!-- Example: Another navigation link -->
+                <li><a href="#contact">Contact</a></li> <!-- Example: Another navigation link -->
+            </ul>
+        </nav>
 
     </header>
     <main>
         <article>
+            <h1>My Digital Journey</h1> <!-- Changed heading for more personal touch -->
+            <h2>Welcome to my Portfolio</h2>
+            <p>This is where I showcase my learning and projects in web development. I am passionate about creating engaging and accessible web experiences.</p>
+            <p>Here you'll find examples of my work, demonstrating my understanding of HTML structure, CSS styling, and soon, interactive JavaScript.</p>
+            <p>I believe in continuous learning and leveraging technology to solve real-world problems.</p>
+            <p>Stay tuned for more updates!</p>
+            <h3>My Skills & Learning Areas</h3>
+            <!-- Added a section for skills inside article -->
+            <ul>
+                <li>HTML5 for robust page structure</li>
+                <li>CSS3 for modern and responsive designs</li>
+                <li>JavaScript for dynamic and interactive features</li>
+                <li>Git & GitHub for version control and collaboration</li>
+                <li>Python for scripting and backend logic</li>
+            </ul>
 
-            <h1>level 1</h1>
-            <h2>level 2</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolore cum quis voluptates corrupti? Suscipit tenetur inventore vitae quas culpa! Rerum voluptatibus aliquid sit officiis sint iusto dolore reiciendis.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-            <p>Lorem, ipsum.</p>
-            <h3>level 3</h3>
-            <a href=" https://i.ibb.co/gTDZZT8/ALX-Logo-07.png "></a>
-
-
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>Country</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>25</td>
-                        <td>USA</td>
-                    </tr>
-                    <tr>
-                        <td>Emily</td>
-                        <td>28</td>
-                        <td>Canada</td>
-                    </tr>
-                    <tr>
-                        <td>Michael</td>
-                        <td>32</td>
-                        <td>Australia</td>
-                    </tr>
-                    <tr>
-                        <td>Sophia</td>
-                        <td>21</td>
-                        <td>UK</td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- New table of learners (from previous task) -->
+            <div class="learners-container">
+                <h2>Learner Information</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Country</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>25</td>
+                            <td>USA</td>
+                        </tr>
+                        <tr>
+                            <td>Emily</td>
+                            <td>28</td>
+                            <td>Canada</td>
+                        </tr>
+                        <tr>
+                            <td>Michael</td>
+                            <td>32</td>
+                            <td>Australia</td>
+                        </tr>
+                        <tr>
+                            <td>Sophia</td>
+                            <td>21</td>
+                            <td>UK</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End of new table -->
         </article>
 
         <aside>
+            <p>Quick facts:</p>
+            <p>I'm currently focused on responsive design.</p>
+            <p>Always open to new collaborations!</p>
+            <!-- Original placeholder for comments thread -->
             placeholder to add comment thread later
         </aside>
 
     </main>
     <footer>
-        <p>Made by Ndumiso - <a href="https://i.ibb.co/gTDZZT8/ALX-Logo-07.png" target="_blank">here</a></p>
+        <p>Made by Ndumiso - <a href="https://i.ibb.co/gTDZZT8/ALX-Logo-07.png" target="_blank">ALX Project Link</a></p> <!-- Added rel for security -->
+        <p>&copy; 2025 Ndumiso Ngobese. All rights reserved.</p> <!-- Added copyright for completeness -->
     </footer>
 </body>
 </html>
