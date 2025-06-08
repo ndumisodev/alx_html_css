@@ -20,7 +20,7 @@ main {
     flex-direction: row; /* Arranges children horizontally, like a row */
     flex: auto; /* Allows main to grow and shrink, taking up available space */
     /* This ensures main expands to fill the space between header and footer */
-    padding: 20px; 
+    padding-top: 2px; 
     gap: 20px; 
 }
 
@@ -62,7 +62,7 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
 
 article p {
     margin-bottom: 1em;
-    text-align: justify; /* Justify text for a cleaner look */
+    text-align: justify; 
 }
 
 
