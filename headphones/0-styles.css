@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+/* Navigation List (<ul>) */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px; 
+}
+
+/* Navigation Links (<a>) */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    transition: color 0.5s ease; /*  Smooth hover effect */
+}
+
+nav a:hover {
+    color: #FF6565; /* Hover color for nav links */
+}
+
+
+header img {
+    height: 30px; 
+    width: 161;
+}
+
+
+
+
+
+
+/* --- Hero Section (Burner) --- */
+.hero-content{
+    background: url('./images/headphones_hero_1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
