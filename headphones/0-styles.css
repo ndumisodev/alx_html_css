@@ -140,9 +140,76 @@ header img {
     z-index: 2000; */
 }
 
+.second-logo{
+    display: none;
+}
 
 
 
+
+
+
+
+
+
+.dropdown-menu{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px; */
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 0;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    z-index: 2000;
+    text-align: center;
+}
+
+.dropdown-menu.open{
+    height: 300px;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+
+
+  .dropdown-menu ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+  }
+
+
+  .dropdown-menu ul {
+    list-style: none;
+    /* display: flex; */
+    /* gap: 2rem; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* padding: 0; */
+    /* margin: 0; */
+    font-family: 'Source Sans Pro', serif;
+    /* font-family: "inherit"; */
+    font-weight: 400;
+    font-style: normal;
+}
 
 
 
@@ -155,6 +222,10 @@ header img {
 
 
 @media (max-width: 768px) {
+
+    .second-logo{
+        display: block;
+    }
 
     .nav-bar{
         display: none;
@@ -175,7 +246,7 @@ header img {
       .dropdown-menu{
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center;
           justify-content: center;
           gap: 40px;
       }
@@ -193,6 +264,14 @@ header img {
         gap: 30px; 
         padding-left: 30px;
     }
+
+
+
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+    }
+
     
 
     /* .dropdown-menu{
@@ -219,3 +298,8 @@ header img {
       font-size: 2.5rem;
   } */
 }
+
+
+
+
+

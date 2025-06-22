@@ -10,10 +10,7 @@
 
 
     <!-- toggle button -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
     <link rel="stylesheet" href="./0-styles.css">
@@ -34,17 +31,17 @@
 
          </div>
 
-         
+
         <div class="toggle_button"><span class="material-symbols-outlined">
             menu
             </span></div>
 
 
-            <div class="dropdown-menu">
-                <div>
-                    <img src="./images/logo_headphones.png" alt="logo">
+            <div>
+                <img class="second-logo" src="./images/logo_headphones.png" alt="logo">
 
-                </div>
+            </div>
+            <div class="dropdown-menu">
          
                     <nav  class="dropdown-nav">
                         <ul>
@@ -76,6 +73,27 @@
         </section>
     </main>
     <script>
+
+        const toggleButton = document.querySelector(".toggle_button")
+        const toggleButtonIcon = document.querySelector(".toggle_button span")
+        const dropDownMenu = document.querySelector(".dropdown-menu")
+
+        toggleButton.addEventListener('click', function() {
+            dropDownMenu.classList.toggle("open");
+            const isOpen = dropDownMenu.classList.contains("open");
+            
+            // Toggle between menu and close icons
+            toggleButtonIcon.textContent = isOpen ? "close" : "menu";
+        });
+
+//  Close dropdown if a link is clicked within it
+    dropDownMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            dropDownMenu.classList.remove("open");
+            toggleButtonIcon.textContent = "menu"; // Reset icon
+            document.body.style.overflow = "auto"; // Re-enable scrolling
+        });
+    });
 
     </script>
 </body>
