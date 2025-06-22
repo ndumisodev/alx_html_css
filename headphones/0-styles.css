@@ -59,5 +59,163 @@ header img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: end; */
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    /* padding-top: 80px; */
+    padding-left: 80px;
+    padding-right: 80px;
+    gap: 50px;
+
+}
+
+
+.hero-header{
+    /* padding: 50px; */
+    /* font-size: 32px; */
+    color: white;
+    /* width: ; */
+}
+
+.cta-button{
+    padding: 50px;
+    /* width: 50%; */
+}
+
+.hero-bio{
+    /* padding: 70px; */
+    padding-bottom: 130px;
+    max-width: 70rem;
+    color: white;
+}
+
+
+
+.cta-btn{
+    background-color: #FF6565;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 22px;
+    font-weight: 600;
+    font-size: 14px;
+    /* margin-top: 40px; */
+    cursor: pointer;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease;
+}
+
+.cta-btn:hover {
+    opacity: 0.9;
+    /* background-color: #a350e0;  */
+}
+
+
+
+
+
+.toggle_button{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+  }
+
+
+  .dropdown-menu{
+    display: none;
+    /* position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 0;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    z-index: 2000; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .nav-bar{
+        display: none;
+    }
+
+    .toggle_button {
+        display: block; 
+        background-color: transparent;
+        padding: 20px 50px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
     
+  
+      .dropdown-menu{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 40px;
+      }
+
+      .first-logo{
+        display: none;
+      }
+
+      nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 30px; 
+        padding-left: 30px;
+    }
+    
+
+    /* .dropdown-menu{
+        left: 2rem;
+        width: unset;
+    } */
+
+    /* nav ul {
+        display: none;
+    } */
+
+
+    /* .hero-content {
+      margin: 80px 20px;
+      padding: 20px;
+  }
+  
+  .image-container {
+      width: 100%;
+      height: 300px;
+  }
+  
+  .hero-content .name {
+      font-size: 2.5rem;
+  } */
 }

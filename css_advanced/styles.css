@@ -44,11 +44,11 @@ header img {
 
 /* Navigation List (<ul>) */
 nav ul {
-    display: flex; /* This is already correct and lays out the <li> items horizontally */
+    display: flex;
     list-style: none;
-    gap: 30px; /* Space between each navigation item */
-    margin: 0; /* Ensure no default margin pushes the ul */
-    padding: 0; /* Ensure no default padding pushes the ul */
+    gap: 30px; 
+    margin: 0; 
+    padding: 0; 
 }
 
 /* Navigation Links (<a>) */
@@ -68,19 +68,19 @@ nav a:hover {
 /* --- Hero Section (Burner) --- */
 main section:first-child {
     /* Background Image ONLY for the Hero Section */
-    background: url('./images/Object.png'); /* Your background image - removed the linear-gradient */
-    background-size: cover; /* Cover the entire section */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent repeating */
-    height: 100vh; /* Make the hero section fill the viewport height */
+    background: url('./images/Object.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
     display: flex;
-    flex-direction: column; /* Arrange content vertically: header, then the two divs */
-    justify-content: center; /* Center content vertically within the section */
-    align-items: center; /* Center content horizontally */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
     text-align: center;
-    color: white; /* Keep text color white for visibility against the background */
-    padding-top: 80px; /* To account for fixed header, pushes content down */
-    position: relative; /* Needed for z-index context if header isn't fixed */
+    color: white; 
+    padding-top: 80px; 
+    position: relative; 
 }
 
 /* Div containing H1, Spans, and Button */
@@ -336,27 +336,25 @@ main section:first-child h2 {
     }
 
     main section:first-child > div:first-of-type {
-        margin-bottom: 50px; /* Reduce space between hero text and pros section on mobile */
-    }
-
+        margin-bottom: 50px; 
     main section:first-child h2 {
-        font-size: 28px; /* Smaller h2 for mobile */
+        font-size: 28px; 
         margin-bottom: 40px;
     }
 
     .pros-container {
-        flex-direction: column; /* Stack pro cards vertically on smaller screens */
-        align-items: center; /* Center them */
-        gap: 30px; /* Adjust gap */
+        flex-direction: column; 
+        align-items: center; 
+        gap: 30px;
     }
 
     .pro-card {
-        width: 100%; /* Allow cards to take full width */
-        max-width: 250px; /* Max width to prevent them from becoming too wide */
+        width: 100%;
+        max-width: 250px; 
     }
 }
 
-/* Original Testimonial, Tutorials, Membership, FAQ, and Footer sections follow below, unchanged */
+
 /* Testimonial Section */
 .testimonial-section {
     background-color: #C271FF;
