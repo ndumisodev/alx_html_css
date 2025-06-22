@@ -302,41 +302,47 @@ header img {
 
 
 
-
 /* --- What We Do Section --- */
 .what-we-do-section {
-    /* background-color: #000;  */
+    
     padding: 80px 0; 
     color: rgb(0, 0, 0); 
-    text-align: center;
+    text-align: center; 
+    
     display: flex;
-    flex-direction: column;
-    gap: 80px;
+    flex-direction: column; 
+    gap: 80px; 
     justify-content: center;
-    align-items: center;
-
+    align-items: center; 
 }
 
+/* Bio Content Styling */
 .what-we-do-content {
-    display: flex;
+   
     width: 80%; 
+    max-width: 900px; 
     margin: 0 auto; 
-    gap: 50px; 
-    flex-wrap: wrap; 
-    align-items: flex-start; 
-    justify-content: center;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 1.1rem;
+    color: black;
 }
 
-
+/* --- Features Grid (Main Layout Control) --- */
 .features-grid {
-    display: flex; 
-    max-width: 1000px; 
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 30px; 
+    display: grid;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 30px;
+
+   
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: start;
 }
 
+/* Individual Feature Item Styling */
 .feature-item {
     display: flex;
     flex-direction: column;
@@ -362,31 +368,41 @@ header img {
 }
 
 
-/* --- Responsive Adjustments for Mobile --- */
-@media (max-width: 768px) {
-    .what-we-do-section {
-        padding: 60px 0; /* Less padding on mobile */
-    }
+/* --- Responsive Media Queries for Features Grid --- */
 
-    .what-we-do-section .section-title {
-        font-size: 2rem;
-        margin-bottom: 30px;
+/* Less than 780px: Two items per row (2x2 square) */
+@media (max-width: 780px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+        gap: 25px; /* Slightly reduced gap */
+        width: 90%;
     }
 
     .what-we-do-content {
-        flex-direction: column; /* Stack bio and grid vertically on mobile */
-        width: 90%; /* Wider on mobile to fill more space */
-        gap: 40px; /* Adjust gap when stacked */
+        width: 90%; /* Make bio wider on smaller screens */
+        font-size: 1rem;
+    }
+}
+
+/* Smaller mobile screens less than 400px: Items align vertically (1 column) */
+@media (max-width: 400px) {
+    .features-grid {
+        grid-template-columns: 1fr; /* Creates a single column */
+        gap: 20px;
+        width: 95%;
     }
 
-    .w-w-d-bio,
-    .features-grid {
-        flex: 1 1 100%; /* Each takes full width when stacked */
-        max-width: 100%; /* Remove max-width constraints on small screens */
-        text-align: center; /* Center bio text on mobile */
+    .what-we-do-section {
+        padding: 50px 0;
+        gap: 50px;
     }
 
-    .features-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Maybe smaller items on very small screens */
+    .what-we-do-content {
+        width: 95%;
+        font-size: 0.95rem;
+    }
+
+    .feature-item span[class^="holberton_school-icon-"] {
+        font-size: 40px; /* Slightly smaller icons on very small screens */
     }
 }
