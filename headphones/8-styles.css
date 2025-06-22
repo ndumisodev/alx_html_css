@@ -1,9 +1,17 @@
+html {
+    scroll-behavior: smooth; 
+
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+
 
 
 header{
@@ -374,7 +382,7 @@ header img {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* Adding transition for smooth animation */
+    /* Add transition for smooth animation */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -539,8 +547,9 @@ header img {
 
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 
-    /* Adding transition for smooth animation */
+    /* Add transition for smooth animation */
     transition: transform 0.4s ease-out, box-shadow 0.4s ease-out; 
+}
 
 .result-item:hover {
     transform: scale(1.08) rotate(3deg); /* Scale up and slightly rotate on hover */
@@ -873,6 +882,19 @@ header img {
         margin-top: 0; 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
