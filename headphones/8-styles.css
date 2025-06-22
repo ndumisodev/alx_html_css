@@ -1,0 +1,879 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+/* Navigation List (<ul>) */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px; 
+}
+
+/* Navigation Links (<a>) */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    transition: color 0.5s ease; /*  Smooth hover effect */
+}
+
+nav a:hover {
+    color: #FF6565; /* Hover color for nav links */
+}
+
+
+header img {
+    height: 30px; 
+    width: 161;
+}
+
+
+
+
+
+
+/* --- Hero Section (Burner) --- */
+.hero-content{
+    background: url('./images/headphones_hero_1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: end; */
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    /* padding-top: 80px; */
+    padding-left: 80px;
+    padding-right: 80px;
+    gap: 50px;
+
+}
+
+
+.hero-header{
+    /* padding: 50px; */
+    /* font-size: 32px; */
+    color: white;
+    /* width: ; */
+}
+
+.cta-button{
+    padding: 50px;
+    /* width: 50%; */
+}
+
+.hero-bio{
+    /* padding: 70px; */
+    padding-bottom: 130px;
+    max-width: 70rem;
+    color: white;
+}
+
+
+
+.cta-btn{
+    background-color: #FF6565;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 22px;
+    font-weight: 600;
+    font-size: 14px;
+    /* margin-top: 40px; */
+    cursor: pointer;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease;
+}
+
+.cta-btn:hover {
+    opacity: 0.9;
+    /* background-color: #a350e0;  */
+}
+
+
+
+
+
+.toggle_button{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+  }
+
+
+  .dropdown-menu{
+    display: none;
+    /* position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 0;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    z-index: 2000; */
+}
+
+.second-logo{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+.dropdown-menu{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px; */
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 0;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    z-index: 2000;
+    text-align: center;
+}
+
+.dropdown-menu.open{
+    height: 300px;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+
+
+  .dropdown-menu ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+  }
+
+
+  .dropdown-menu ul {
+    list-style: none;
+    /* display: flex; */
+    /* gap: 2rem; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* padding: 0; */
+    /* margin: 0; */
+    font-family: 'Source Sans Pro', serif;
+    /* font-family: "inherit"; */
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .second-logo{
+        display: block;
+    }
+
+    .nav-bar{
+        display: none;
+    }
+
+    .toggle_button {
+        display: block; 
+        background-color: transparent;
+        padding: 20px 50px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+    
+  
+      .dropdown-menu{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 40px;
+      }
+
+      .first-logo{
+        display: none;
+      }
+
+      nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 30px; 
+        padding-left: 30px;
+    }
+
+
+
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+    }
+
+    
+
+    /* .dropdown-menu{
+        left: 2rem;
+        width: unset;
+    } */
+
+    /* nav ul {
+        display: none;
+    } */
+
+
+    /* .hero-content {
+      margin: 80px 20px;
+      padding: 20px;
+  }
+  
+  .image-container {
+      width: 100%;
+      height: 300px;
+  }
+  
+  .hero-content .name {
+      font-size: 2.5rem;
+  } */
+}
+
+
+
+
+/* --- What We Do Section --- */
+.what-we-do-section {
+    
+    padding: 80px 0; 
+    color: rgb(0, 0, 0); 
+    text-align: center; 
+    
+    display: flex;
+    flex-direction: column; 
+    gap: 80px; 
+    justify-content: center;
+    align-items: center; 
+}
+
+/* Bio Content Styling */
+.what-we-do-content {
+   
+    width: 80%; 
+    max-width: 900px; 
+    margin: 0 auto; 
+    line-height: 1.6;
+    text-align: center;
+    font-size: 1.1rem;
+    color: black;
+}
+
+/* --- Features Grid (Main Layout Control) --- */
+.features-grid {
+    display: grid;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 30px;
+
+   
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: start;
+}
+
+/* Individual Feature Item Styling */
+/* .feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feature-item span[class^="holberton_school-icon-"] {
+    font-size: 50px;
+    color: #FF6565;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+} */
+
+
+/* Individual Feature Item Styling */
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Adding transition for smooth animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px) scale(1.03); /* Lift up slightly and scale up */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+.feature-item span[class^="holberton_school-icon-"] {
+    font-size: 50px;
+    color: #FF6565;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+}
+
+
+/* --- Responsive Media Queries for Features Grid --- */
+
+/* Less than 780px: Two items per row (2x2 square) */
+@media (max-width: 780px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+        gap: 25px; /* Slightly reduced gap */
+        width: 90%;
+    }
+
+    .what-we-do-content {
+        width: 90%; /* Make bio wider on smaller screens */
+        font-size: 1rem;
+    }
+}
+
+/* Smaller mobile screens less than 400px: Items align vertically (1 column) */
+@media (max-width: 400px) {
+    .features-grid {
+        grid-template-columns: 1fr; /* Creates a single column */
+        gap: 20px;
+        width: 95%;
+    }
+
+    .what-we-do-section {
+        padding: 50px 0;
+        gap: 50px;
+    }
+
+    .what-we-do-content {
+        width: 95%;
+        font-size: 0.95rem;
+    }
+
+    .feature-item span[class^="holberton_school-icon-"] {
+        font-size: 40px; /* Slightly smaller icons on very small screens */
+    }
+}
+
+
+
+
+
+
+/* --- Our Results Section --- */
+.our-results-section {
+    background: url('./images/headphones_hero_2.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+}
+
+.our-results-section .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.our-results-section .section-description {
+    width: 70%;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* --- Results Grid Layout --- */
+.results-grid {
+    display: grid;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 30px; 
+    
+    /* Default for larger screens (> ~800px): 4 columns */
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+/* Individual Result Item (The Pentagon) Styling */
+/* .result-item {
+   
+    width: 150px;
+    height: 150px; 
+    position: relative;
+    background-color: #FF6565; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box; 
+
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+
+    transition: all 0.3s ease;
+}
+
+
+.result-item h3 {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 5px;
+    line-height: 1; /* Adjust line height to fit well */
+/* } */
+
+/* .result-item p {
+    font-size: 0.8rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+  */
+
+
+
+/* Individual Result Item (The Pentagon) Styling */
+.result-item {
+   
+    width: 150px;
+    height: 150px; 
+    position: relative;
+    background-color: #FF6565; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box; 
+
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+
+    /* Adding transition for smooth animation */
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out; 
+
+.result-item:hover {
+    transform: scale(1.08) rotate(3deg); /* Scale up and slightly rotate on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.result-item h3 {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.result-item p {
+    font-size: 0.8rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+
+/* --- Responsive Media Queries for Results Grid and Pentagons --- */
+
+/* For screens less than 780px (e.g., tablets): 2x2 grid */
+@media (max-width: 780px) {
+    .our-results-section .section-title {
+        font-size: 1rem;
+    }
+    .our-results-section .section-description {
+        width: 85%;
+        font-size: 0.8rem;
+        margin-bottom: 40px;
+    }
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 25px; 
+        width: 90%;
+    }
+    .result-item {
+        width: 140px; /* Slightly smaller pentagons on tablet */
+        height: 140px;
+    }
+    .result-item h3 {
+        font-size: 1rem;
+    }
+    .result-item p {
+        font-size: 0.8rem;
+    }
+}
+
+/* For smaller mobile screens less than 400px: Stack vertically (1 column) */
+@media (max-width: 400px) {
+    .our-results-section {
+        padding: 50px 0;
+    }
+    .our-results-section .section-title {
+        font-size: 1.8rem;
+    }
+    .our-results-section .section-description {
+        width: 90%;
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+    .results-grid {
+        grid-template-columns: 1fr; /* 1 column */
+        gap: 20px;
+        width: 90%;
+    }
+    .result-item {
+        width: 130px; /* Smaller pentagons on mobile */
+        height: 130px;
+    }
+    .result-item h3 {
+        font-size: 1.8rem;
+    }
+    .result-item p {
+        font-size: 0.75rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Contact Us Section --- */
+.contact-us-section {
+    background-color: #F8F8F8;
+    padding: 80px 0;
+    color: #333;
+    text-align: center;
+}
+
+.contact-us-section .section-title {
+    font-size: 1rem;
+    margin-bottom: 50px; /* Space below the title */
+    color: #000; /* Ensure title is black/dark */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; 
+    gap: 25px;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white; 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.form-group {
+    text-align: left; 
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #FF6565; 
+    /* outline: none; */
+    box-shadow: 0 0 0 3px rgba(255, 101, 101, 0.2);
+}
+
+/* Style for the submit button */
+.contact-form .form-submit-btn {
+    /* Inherits general cta-button styles, but we can override if needed */
+    background-color: #FF6565; 
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Smooth hover effects */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    align-self: center;
+}
+
+.contact-form .form-submit-btn:hover {
+    background-color: #e65c5c;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* --- Responsive Adjustments for Contact Form --- */
+@media (max-width: 768px) {
+    .contact-us-section {
+        padding: 60px 0;
+    }
+    .contact-us-section .section-title {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+    .contact-form {
+        width: 95%; /* Wider on smaller screens */
+        padding: 20px;
+        gap: 20px;
+    }
+    .form-group label {
+        font-size: 0.8rem;
+    }
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        padding: 12px;
+        font-size: 0.8rem;
+    }
+    .contact-form .form-submit-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .contact-us-section {
+        padding: 40px 0;
+    }
+    .contact-us-section .section-title {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    .contact-form {
+        padding: 15px;
+        gap: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Footer Section --- */
+.footer-section {
+    background-color: #071629;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.footer-top-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 90%; 
+    max-width: 1200px; 
+}
+
+.footer-logo {
+    width: 160px; 
+    height: auto; 
+}
+
+.social-links {
+    display: flex;
+    gap: 25px; 
+    font-size: 30px; 
+}
+
+.social-links a {
+    color: white; 
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    text-decoration: none; 
+}
+
+.social-links a:hover {
+    color: #FF6565; 
+    transform: translateY(-3px); 
+}
+
+.copyright-text {
+    font-size: 0.9rem;
+    color: #bbb; 
+}
+
+
+/* --- Responsive Adjustments for Footer --- */
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 40px 15px;
+        gap: 20px; 
+    }
+
+    .footer-top-row {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .footer-logo {
+        width: 140px; 
+    }
+
+    .social-links {
+        font-size: 25px; 
+        gap: 20px;
+    }
+
+    .copyright-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* For screens larger than 768px (desktop) */
+@media (min-width: 769px) {
+    .footer-section {
+    
+        padding: 60px 80px; 
+    }
+
+
+    .copyright-text {
+        margin-top: 0; 
+    }
+}
+
+
+
+
