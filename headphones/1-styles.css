@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+/* Navigation List (<ul>) */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px; 
+}
+
+/* Navigation Links (<a>) */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    transition: color 0.5s ease; /*  Smooth hover effect */
+}
+
+nav a:hover {
+    color: #FF6565; /* Hover color for nav links */
+}
+
+
+header img {
+    height: 30px; 
+    width: 161;
+}
+
+
+
+
+
+
+/* --- Hero Section (Burner) --- */
+.hero-content{
+    background: url('./images/headphones_hero_1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: end; */
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    /* padding-top: 80px; */
+    padding-left: 80px;
+    padding-right: 80px;
+    gap: 50px;
+
+}
+
+
+.hero-header{
+    /* padding: 50px; */
+    /* font-size: 32px; */
+    color: white;
+    /* width: ; */
+}
+
+.cta-button{
+    padding: 50px;
+    /* width: 50%; */
+}
+
+.hero-bio{
+    /* padding: 70px; */
+    padding-bottom: 130px;
+    max-width: 70rem;
+    color: white;
+}
+
+
+
+.cta-btn{
+    background-color: #FF6565;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 22px;
+    font-weight: 600;
+    font-size: 14px;
+    /* margin-top: 40px; */
+    cursor: pointer;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease;
+}
+
+.cta-btn:hover {
+    opacity: 0.9;
+    /* background-color: #a350e0;  */
+}
+
+
+
+
+
+.toggle_button{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+  }
+
+
+  .dropdown-menu{
+    display: none;
+    /* position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 0;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    z-index: 2000; */
+}
+
+.second-logo{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+.dropdown-menu{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px; */
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 0;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    z-index: 2000;
+    text-align: center;
+}
+
+.dropdown-menu.open{
+    height: 300px;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+
+
+  .dropdown-menu ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+  }
+
+
+  .dropdown-menu ul {
+    list-style: none;
+    /* display: flex; */
+    /* gap: 2rem; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* padding: 0; */
+    /* margin: 0; */
+    font-family: 'Source Sans Pro', serif;
+    /* font-family: "inherit"; */
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .second-logo{
+        display: block;
+    }
+
+    .nav-bar{
+        display: none;
+    }
+
+    .toggle_button {
+        display: block; 
+        background-color: transparent;
+        padding: 20px 50px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+    
+  
+      .dropdown-menu{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 40px;
+      }
+
+      .first-logo{
+        display: none;
+      }
+
+      nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 30px; 
+        padding-left: 30px;
+    }
+
+
+
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+    }
+
+    
+
+    /* .dropdown-menu{
+        left: 2rem;
+        width: unset;
+    } */
+
+    /* nav ul {
+        display: none;
+    } */
+
+
+    /* .hero-content {
+      margin: 80px 20px;
+      padding: 20px;
+  }
+  
+  .image-container {
+      width: 100%;
+      height: 300px;
+  }
+  
+  .hero-content .name {
+      font-size: 2.5rem;
+  } */
+}
+
+
+
+
+
+/* --- What We Do Section --- */
+.what-we-do-section {
+    /* background-color: #000;  */
+    padding: 80px 0; 
+    color: rgb(0, 0, 0); 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.what-we-do-content {
+    display: flex;
+    width: 80%; 
+    margin: 0 auto; 
+    gap: 50px; 
+    flex-wrap: wrap; 
+    align-items: flex-start; 
+    justify-content: center;
+}
+
+
+.features-grid {
+    display: flex; 
+    max-width: 1000px; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px; 
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feature-item span[class^="holberton_school-icon-"] {
+    font-size: 50px;
+    color: #FF6565;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+}
+
+
+/* --- Responsive Adjustments for Mobile --- */
+@media (max-width: 768px) {
+    .what-we-do-section {
+        padding: 60px 0; /* Less padding on mobile */
+    }
+
+    .what-we-do-section .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .what-we-do-content {
+        flex-direction: column; /* Stack bio and grid vertically on mobile */
+        width: 90%; /* Wider on mobile to fill more space */
+        gap: 40px; /* Adjust gap when stacked */
+    }
+
+    .w-w-d-bio,
+    .features-grid {
+        flex: 1 1 100%; /* Each takes full width when stacked */
+        max-width: 100%; /* Remove max-width constraints on small screens */
+        text-align: center; /* Center bio text on mobile */
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Maybe smaller items on very small screens */
+    }
+}
